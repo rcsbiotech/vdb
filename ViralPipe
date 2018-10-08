@@ -1,0 +1,84 @@
+#!/bin/bash
+#
+#              INGLÊS/ENGLISH
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#  http://www.gnu.org/copyleft/gpl.html
+#
+#
+#             PORTUGUÊS/PORTUGUESE
+#  Este programa é distribuído na expectativa de ser útil aos seus
+#  usuários, porém NÃO TEM NENHUMA GARANTIA, EXPLÍCITAS OU IMPLÍCITAS,
+#  COMERCIAIS OU DE ATENDIMENTO A UMA DETERMINADA FINALIDADE.  Consulte
+#  a Licença Pública Geral GNU para maiores detalhes.
+#  http://www.gnu.org/copyleft/gpl.html
+#
+#  Copyright (C) 2018  Universidade Estadual Paulista - UNESP
+#
+#  Universidade Estadual Paulista "Júlio de Mesquita Filho"
+#  Laboratório de Bioinformática
+#
+#  Rafael Correia da Silva
+#  rcs.biotec@gmail.com
+#
+
+
+# Environment variables
+threads=15
+
+# Variables
+readR1=$1
+readR2=${2:null}
+
+## Treats single as merged if there is no R2
+if [[ ${readR2} = "null" ]]; then
+	${merged} = ${readR1}
+fi
+
+# Program to Run
+## OPT 1: VirusDetect
+do_run="VirusDetect"
+
+### VirusDetect parameters
+vd_evalue="1e-10"
+vd_identity="0.90"
+vd_targetdb="vrl_plant"
+
+# Strip R1, R2 and fastq basename"
+fqbase=`basename ${readR1} .fastq | sed 's/_R1.*//'`
+fqmerged="merged/${fqbase}.merged.fastq"
+
+## Main VirusDetect pipe
+if [[ ${do_run} = "VirusDetect" ]]; then
+	
+
+	# Checks if MERGED exists,
+	# if not, runs PEAR to do it
+	if [[ ! -f ${fqmerged} ]]; then
+
+	# Run pear
+	echo "There is not a merged file!"
+	echo
+
+	fi
+	
+	echo "Starting VirusDetect analysis"
+	echo
+	echo "The time is:"
+	date
+
+	VirusDetect \
+		--reference ${vd_targetdb} \
+		--thread_num ${threads} \
+		--exp_value ${vd_evalue} \
+		--percent_identity ${vd_identity} \
+		${fqmerged}
+
+	echo "Analysis finished for VirusDetect"
+
+fi
+
+
+
