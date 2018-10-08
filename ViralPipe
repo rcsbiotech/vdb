@@ -14,6 +14,7 @@
 #	this list of conditions and the following disclaimer in the documentation
 #	And/or other materials provided with the distribution.
 #
+<<<<<<< HEAD
 #	THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
 #	AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
 #	IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
@@ -24,6 +25,22 @@
 #	CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 #	OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 #	OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+=======
+#             PORTUGUÊS/PORTUGUESE
+#  Este programa é distribuído na expectativa de ser útil aos seus
+#  usuários, porém NÃO TEM NENHUMA GARANTIA, EXPLÍCITAS OU IMPLÍCITAS,
+#  COMERCIAIS OU DE ATENDIMENTO A UMA DETERMINADA FINALIDADE.  Consulte
+#  a Licença Pública Geral GNU para maiores detalhes.
+#  http://www.gnu.org/copyleft/gpl.html
+#
+#  Copyright (C) 2018  Universidade Estadual Paulista - UNESP
+#
+#  Universidade Estadual Paulista "Júlio de Mesquita Filho"
+#  Laboratório de Bioinformática
+#
+#  Rafael Correia da Silva
+#  rcs.biotec@gmail.com
+>>>>>>> 6cdc5cf97e4d9c513bcf624adc646440dcbba001
 
 # Environment variables
 ## No. of threads
