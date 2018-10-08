@@ -1,5 +1,7 @@
 # vdb
-viRNAdb project pipeline design
+
+ViRNAdb project pipeline design
+Project for Masters course at São Paulo State University - School of Agrarian and Veterinarian Sciences
 
 ## Implementation
 
@@ -7,3 +9,7 @@ viRNAdb project pipeline design
 2. Run my pipeline to acquire and assemble viral sequences and genomes
 3. Report the biological matrix (BIOM) and profile (RScript)
 4. Curate into a database
+
+## Current implementation
+
+![01_impl_october01](C:\Users\Ruindows7\Documents\ShareX\Screenshots\2018-10\diaw_2018-10-08_15-37-57.png)
