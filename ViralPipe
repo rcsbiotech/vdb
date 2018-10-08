@@ -26,6 +26,7 @@
 
 
 # Environment variables
+## No. of threads
 threads=15
 
 # Variables
